@@ -4,7 +4,7 @@ import {Text,Input, Button} from 'react-native-elements';
 import Spacer from '../components/Spacer';
 import {Context as AuthContext} from '../context/AuthContext';
 
-const SignupScreen = ({navigation})=>{
+const AuthForm = ({navigation})=>{
     const {state,signup} = useContext(AuthContext);
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
@@ -45,7 +45,7 @@ const SignupScreen = ({navigation})=>{
     );
 };
 
-SignupScreen.navigationOptions = () =>{
+AuthForm.navigationOptions = () =>{
     return {
         header: null,
     };
@@ -68,4 +68,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default SignupScreen;
+export default AuthForm;
